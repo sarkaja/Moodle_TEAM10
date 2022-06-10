@@ -13,10 +13,14 @@ from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+
 
 #driver a jeho umisteni
-driver = webdriver.Chrome('C:/users/dell/ted/chromedriver.exe')
-
+#driver = webdriver.Chrome('C:/users/dell/ted/chromedriver.exe')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 #prihlaseni do moodlu a vstup do kurzu
 driver.get("https://moodle.vse.cz/")
 
